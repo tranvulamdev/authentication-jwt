@@ -1,0 +1,36 @@
+GET http://localhost:3500
+
+###
+POST http://localhost:3500/user/register
+Content-Type: application/json
+
+{
+    "email": "test02@gmail.com",
+    "password": "abc123"
+}
+
+###
+POST http://localhost:3500/user/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjk3YTQwMzk1ZTA2ZGE5ZTE0ZGVkN2IiLCJpYXQiOjE2NTQyNDM5ODYsImV4cCI6MTY4NTgwMTU4Nn0.FCfLy2TBmg96YZ6lnKWl9oErUIbsi-dAQmW0VxsiXmM"
+}
+###
+POST http://localhost:3500/user/login
+Content-Type: application/json
+
+{
+    "email": "test02@gmail.com",
+    "password": "abc123"
+}
+###
+DELETE http://localhost:3500/user/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjk3YTQwMzk1ZTA2ZGE5ZTE0ZGVkN2IiLCJpYXQiOjE2NTQyNDQwMjQsImV4cCI6MTY4NTgwMTYyNH0.jSnwd42q5xVCUS4rizkCggMEK9aM3AcI8humUUBNFMI"
+}
+###
+GET http://localhost:3500/user/lists
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjk3YTQwMzk1ZTA2ZGE5ZTE0ZGVkN2IiLCJpYXQiOjE2NTQyNDM5ODYsImV4cCI6MTY1NDI0NzU4Nn0.sNyKmVx8LlAOurURFdlAO42seGcrocFeVgqtUataoEM
